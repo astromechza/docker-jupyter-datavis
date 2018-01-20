@@ -20,18 +20,10 @@ Matplotlib is configured with `inline` mode and a `15 x 10` figsize.
 
 A `demo.ipynb` is available in the notebook to get you started.
 
-## build
-
-```
-$ docker build -t jn .
-```
-
-- Use whatever tag you need, I use `jn` because its short and quick.
-
 ## run
 
 ```
-$ docker run --rm -ti -p 8888:80 jn
+$ docker run --rm -ti -p 80:80 astromechza/docker-jupyter-datavis
 ```
 
 **Note**: if you run without the `-p` declaraion, you'll need to work out what
@@ -40,13 +32,13 @@ docker ip it is available on.
 Mount `/workdir` if you want to keep your notebooks around. Either as a bind mount:
 
 ```
-$ docker run --rm -ti -p 8888:80 -v /tmp/notebooks:/workdir jn
+$ docker run --rm -ti -p 80:80 -v /tmp/notebooks:/workdir astromechza/docker-jupyter-datavis
 ```
 
 Or as a named volume (which I prefer):
 
 ```
-$ docker run --rm -ti -p 8888:80 -v jnwd:/workdir jn
+$ docker run --rm -ti -p 80:80 -v jnwd:/workdir astromechza/docker-jupyter-datavis
 ```
 
-Any other jupyter options can be passed after the `jn`.
+Any other jupyter options can be passed after the container name.
