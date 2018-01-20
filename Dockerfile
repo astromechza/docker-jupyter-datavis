@@ -5,7 +5,8 @@ RUN         pip install \
     matplotlib \
     numpy \
     scipy \
-    pandas
+    pandas \
+    seaborn
 
 RUN         mkdir -p /workdir /root/.jupyter /root/.ipython/profile_default
 COPY        jupyter_notebook_config.py /root/.jupyter/

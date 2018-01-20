@@ -13,6 +13,7 @@ matplotlib
 numpy
 scipy
 pandas
+seaborn
 ```
 
 Matplotlib is configured with `inline` mode and a `15 x 10` figsize.
