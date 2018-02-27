@@ -20,6 +20,16 @@ Matplotlib is configured with `inline` mode and a `15 x 10` figsize.
 
 A `demo.ipynb` is available in the notebook to get you started.
 
+Some wrapper code is available to install any extra libraries that you require via
+the `PIP_PRE_INSTALL` environment variable. IF provided, it will be split by commas
+and passed to `pip install`.
+
+For example:
+
+```
+$ docker run --rm -ti -p 80:80 -e PIP_PRE_INSTALL library1,library2 astromechza/docker-jupyter-datavis
+```
+
 ## run
 
 ```
